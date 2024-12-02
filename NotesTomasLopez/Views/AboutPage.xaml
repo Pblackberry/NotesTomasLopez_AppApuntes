@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:NotesTomasLopez.Models"
+             x:Class="NotesTomasLopez.Views.AboutPage"
+             Title="About_Tomas Lopez">
+    <ContentPage.BindingContext>
+        <models:About />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout Spacing="10" Margin="10" VerticalOptions="Center" HorizontalOptions="Center">
+       
+        <HorizontalStackLayout Spacing="10">
+            <Image Source="gurren.png"
+                   SemanticProperties.Description="The dot net bot waving hello!"
+                   HeightRequest="100" />
+            <Label FontSize="44" FontAttributes="Bold" Text="{Binding Title}" VerticalOptions="End" />
+        </HorizontalStackLayout>
+        <Label Text="{Binding Message}" />
+
+
+        <Button Text="Learn more..." Clicked="LearnMore_Clicked" />
+    </VerticalStackLayout>
+
+</ContentPage>
